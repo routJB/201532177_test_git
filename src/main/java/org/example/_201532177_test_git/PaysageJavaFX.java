@@ -34,7 +34,15 @@ public class PaysageJavaFX extends Application {
         // Dromadaire
         Group dromadaire = createDromedary(400, 350, Color.BROWN);
 
-        Group root = new Group(ciel, gazon, soleil, dromadaire);
+        // Lac
+        Rectangle lac = new Rectangle(800, 100, Color.BLUE);
+        lac.setY(300); // Positionne le lac au milieu de la fenêtre
+
+        // Bateau
+        Rectangle bateau = new Rectangle(200, 320, 50, 20);
+        bateau.setFill(Color.BROWN);
+
+        Group root = new Group(ciel, gazon, soleil, dromadaire, lac, bateau);
         Scene scene = new Scene(root, 800, 600);
 
         primaryStage.setScene(scene);
@@ -70,7 +78,3 @@ public class PaysageJavaFX extends Application {
         return group;
     }
 }
-
-
-
-
